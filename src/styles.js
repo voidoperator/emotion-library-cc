@@ -1,9 +1,25 @@
 import styled from "@emotion/styled";
 
+export const theme = {
+  colors: {
+    primary: "#03045e",
+    secondary: "#caf0f8",
+    tertiary: "#023e8a",
+    quaternary: "#fff",
+  },
+  fonts: {
+    primary: "helvetica",
+  },
+  fontSize: {
+    primary: "20px",
+    secondary: "14px",
+  },
+};
+
 export const CardWrapper = styled.div`
   width: 250px;
   height: 325px;
-  background: #fff;
+  background: ${(props) => props.theme.colors.quaternary};
   border-radius: 15px;
   padding-bottom: 5px;
   @media (max-width: 900px) {
@@ -30,8 +46,8 @@ export const TitleWrapper = styled.h2`
 
 export const DescriptionWrapper = styled.h3`
   margin-top: 5px;
-  font-size: 14px;
-  color: #023e8a;
+  font-size: ${(props) => props.theme.fontSize.secondary};
+  color: ${(props) => props.theme.colors.tertiary};
 `;
 
 export const ActionsWrapper = styled.div`
@@ -56,11 +72,11 @@ const Button = styled.button`
 `;
 
 export const PrimaryButton = styled(Button)`
-  background-color: #03045e;
-  color: #caf0f8;
+  background-color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.secondary};
 `;
- 
+
 export const SecondaryButton = styled(Button)`
-  background-color: #caf0f8;
-  color: #03045e;
+  background-color: ${(props) => props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.primary};
 `;
