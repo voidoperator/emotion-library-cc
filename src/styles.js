@@ -40,7 +40,7 @@ export const ActionsWrapper = styled.div`
   display: flex;
 `;
 
-export const Button = styled.button`
+const Button = styled.button`
   width: 100%;
   margin-right: 10px;
   margin-top: 4px;
@@ -53,4 +53,14 @@ export const Button = styled.button`
   &:hover {
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.16);
   }
+`;
+
+export const PrimaryButton = styled(Button)`
+  background-color: #03045e;
+  color: #caf0f8;
+`;
+ 
+export const SecondaryButton = styled(Button)`
+  background-color: #caf0f8;
+  color: #03045e;
 `;

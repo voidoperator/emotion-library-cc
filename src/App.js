@@ -8,7 +8,8 @@ import {
   TitleWrapper,
   DescriptionWrapper,
   ActionsWrapper,
-  Button,
+  PrimaryButton,
+  SecondaryButton,
 } from "./styles";
 
 const hotels = [
@@ -77,8 +78,8 @@ function App() {
                         <DescriptionWrapper>{hotel.description}</DescriptionWrapper>
                     </TextWrapper>
                     <ActionsWrapper>
-                        <Button>Details</Button>
-                        <Button>Book</Button>
+                      <PrimaryButton>Details</PrimaryButton>
+                      <SecondaryButton>Book</SecondaryButton>
                     </ActionsWrapper>
                 </CardWrapper>
             );
