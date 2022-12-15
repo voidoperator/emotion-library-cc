@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/react";
 
 export const theme = {
   colors: {
@@ -15,6 +16,15 @@ export const theme = {
     secondary: "14px",
   },
 };
+
+export const LogoSpin = keyframes`
+from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 export const CardWrapper = styled.div`
   width: 250px;
